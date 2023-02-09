@@ -1,0 +1,15 @@
+#Profesor:
+-Este es el único fichero que voy a editar del proyecto, su función es para indicar pautas a seguir para su evaluación y 
+consejos para solucionar fallos o mofificar características para la adecuación de la nasignatura.
+-Cada pauta implicará una calificación.
+-Su eliminación implica la anulación del proyecto.
+-Sólo añadir texto encabezandolo con la fecha y delimitadores ++++
+
+09/02/2023
+copia del inicial ReadMe:
+Un poco escueta la presentación de tu proyecto, me gustaría que lo describieras indicando sus características y tu objetivo.
+Debes indicar en el Readme:
+-De que va el proyecto,
+-la tecnología que usas
+-la dirección de tu página web en la plataforma Odoo, como referencia, tipo wiki, de tu proyecto.
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
