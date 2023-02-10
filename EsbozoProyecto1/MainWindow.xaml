@@ -18,7 +18,9 @@
                 </TransformGroup>
             </TextBox.RenderTransform>
         </TextBox>
-        <Button Content="Comienza con tu día especial.." HorizontalAlignment="Left" Margin="54.993,603.577,0,0" VerticalAlignment="Top" Width="327.706" Height="36.423" RenderTransformOrigin="0.19,1.846" Background="#FFFABFB7" FontFamily="Myanmar Text" FontSize="22"/>
+        <Button Content="Comienza con tu día especial.." HorizontalAlignment="Left" Margin="54.993,603.577,0,0"
+				Click = "OnClick"
+				VerticalAlignment="Top" Width="327.706" Height="36.423" RenderTransformOrigin="0.19,1.846" Background="#FFFABFB7" FontFamily="Myanmar Text" FontSize="22"/>
         <TextBox HorizontalAlignment="Left" Height="60.333" Margin="54.993,519.036,0,0" TextWrapping="Wrap" Text="Planificar un día especial requiere herramientas especiales " VerticalAlignment="Top" Width="345.146" FontFamily="Segoe Print" FontSize="14"/>
 
     </Grid>

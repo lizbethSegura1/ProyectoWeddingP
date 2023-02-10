@@ -20,9 +20,19 @@ namespace EsbozoProyecto1
     /// </summary>
     public partial class MainWindow : Window
     {
+        Database db;
         public MainWindow()
         {
             InitializeComponent();
+            db = new Database();
+            db.CreateDB();
         }
+
+        private void OnClick(object sender, RoutedEventArgs e) {
+            Login login = new Login();
+            login.ShowDialog();
+        } 
+
+        
     }
 }
