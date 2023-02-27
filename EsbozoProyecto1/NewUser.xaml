@@ -19,6 +19,8 @@
         <TextBox Grid.Row="1" Name="Email" Margin="62,9.4,21.6,0.4"/>
         <Label Grid.Row="2" Content="PASSWD" />
         <TextBox Grid.Row="2" Name="Passwd" Margin="62,4.6,21.6,5.2"/>
-        <Button Grid.Row="3" Content="CREATE USER" Margin="62,4.8,21.6,5" Click="OnCreateUser"/>
+		<Label Grid.Row="3" Content="Indique email del que se casa" />
+		<TextBox Grid.Row="2" Name="Boda" Margin="62,4.6,21.6,5.2"/>
+        <Button Grid.Row="4" Content="CREATE USER" Margin="62,4.8,21.6,5" Click="OnCreateUser"/>
     </Grid>
 </Window>

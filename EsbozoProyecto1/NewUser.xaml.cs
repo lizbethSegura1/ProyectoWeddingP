@@ -35,6 +35,7 @@ namespace EsbozoProyecto1
             u.Email = Email.Text;
             u.Nombre = Name.Text;
             u.Password = Passwd.Text;
+            u.Boda = Boda.Text;
             db.setUser(u);
             Close();
        

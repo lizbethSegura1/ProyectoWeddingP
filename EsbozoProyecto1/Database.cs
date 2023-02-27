@@ -18,9 +18,10 @@ namespace EsbozoProyecto1
                 connection.Open();
                 var command = connection.CreateCommand();
                 command.CommandText = @"CREATE TABLE IF NOT EXISTS users ( 
-                    name TEXT,
-                    email TEXT,
-                    passwd TEXT
+                    name TEXT not null,
+                    email TEXT not null,
+                    passwd TEXT not null,
+                    emailBoda TEXT 
                 );";
                 command.ExecuteNonQuery();
                 connection.Close();
@@ -73,11 +74,12 @@ namespace EsbozoProyecto1
 
                 var command = connection.CreateCommand();
                 command.CommandText =
-                @"INSERT INTO USERS (email, name, passwd) values ($email, $name, $password)";
+                @"INSERT INTO USERS (email, name, passwd, emailBoda) values ($email, $name, $password, $boda)";
                 
                 command.Parameters.AddWithValue("$email", user.Email);
                 command.Parameters.AddWithValue("$name", user.Nombre);
                 command.Parameters.AddWithValue("$password", user.Password);
+                command.Parameters.AddWithValue("$boda", user.Boda);
                 command.ExecuteNonQuery();
                 connection.Close();
 
