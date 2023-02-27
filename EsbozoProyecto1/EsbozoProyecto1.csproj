@@ -106,6 +106,9 @@
     <Compile Include="Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
+    <Compile Include="PaginaPrincipal.xaml.cs">
+      <DependentUpon>PaginaPrincipal.xaml</DependentUpon>
+    </Compile>
     <Compile Include="User.cs" />
     <Page Include="NewUser.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -128,6 +131,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="PaginaPrincipal.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -158,6 +165,27 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Captura.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="heart-529607_1280.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="matrimonio.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="137003.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="proveedores.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="invitados.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="WhatsApp Image 2023-02-27 at 20.39.04.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="WhatsApp Image 2023-02-27 at 20.44.31.jpeg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

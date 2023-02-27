@@ -6,9 +6,8 @@
         xmlns:local="clr-namespace:EsbozoProyecto1"
         mc:Ignorable="d"
         Title="MainWindow" Height="650" Width="468.902">
-    <Grid Margin="10,-52.134,28.415,21.134">
-        <Image Margin="67.341,196.625,69.459,157.026" Source="Captura.PNG" Stretch="Fill"/>
-        <TextBox HorizontalAlignment="Left" Height="47.149" Margin="72.342,145.857,0,0" TextWrapping="Wrap" Text="Organizador de Bodas" VerticalAlignment="Top" Width="279.405" FontFamily="Segoe Print" FontWeight="Bold" FontSize="24" RenderTransformOrigin="0.5,0.5">
+    <Grid Margin="10,-52,3.4,21">
+        <TextBox HorizontalAlignment="Left" Height="42" Margin="15,54,-1,0" TextWrapping="Wrap" Text="Bienvenido a tu Organizador &#xD;&#xA;" VerticalAlignment="Top" Width="435"  RenderTransformOrigin="0.5,0.5" FontFamily="Times New Roman" FontSize="35">
             <TextBox.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -18,10 +17,11 @@
                 </TransformGroup>
             </TextBox.RenderTransform>
         </TextBox>
-        <Button Content="Comienza con tu día especial.." HorizontalAlignment="Left" Margin="54.993,603.577,0,0"
+        <Button Content="Comienza con tu día especial.." HorizontalAlignment="Left" Margin="60,602,0,0"
 				Click = "OnClick"
-				VerticalAlignment="Top" Width="327.706" Height="36.423" RenderTransformOrigin="0.19,1.846" Background="#FFFABFB7" FontFamily="Myanmar Text" FontSize="22"/>
-        <TextBox HorizontalAlignment="Left" Height="60.333" Margin="54.993,519.036,0,0" TextWrapping="Wrap" Text="Planificar un día especial requiere herramientas especiales " VerticalAlignment="Top" Width="345.146" FontFamily="Segoe Print" FontSize="14"/>
+				VerticalAlignment="Top" Width="308" Height="39"  Background="#FFFABFB7" FontFamily="Myanmar Text" FontSize="22"/>
+        <TextBox HorizontalAlignment="Left" Height="65" Margin="10,529,0,0" TextWrapping="Wrap" Text="Planificar un día especial requiere herramientas especiales " VerticalAlignment="Top" Width="398" FontFamily="Times New Roman" FontSize="20"/>
+        <Image Margin="0,106,0,127" Source="matrimonio.jpeg" Stretch="Fill"/>
 
     </Grid>
 </Window>

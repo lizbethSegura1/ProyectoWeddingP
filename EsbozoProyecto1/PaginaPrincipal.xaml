@@ -1,0 +1,25 @@
+﻿<Window x:Class="EsbozoProyecto1.PaginaPrincipal"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EsbozoProyecto1"
+        mc:Ignorable="d"
+        Title="PaginaPrincipal" Height="866.054" Width="887.041">
+    <Grid Margin="0,0,-6.6,19.4">
+        <Image Margin="0,0,10.4,405.4" Source="137003.jpeg" Stretch="Fill"/>
+        <Button HorizontalAlignment="Left" Margin="95,439,0,0" VerticalAlignment="Top" Width="125" Height="97" Click="Button_Click_1" Background="White">
+            <Image Source="proveedores.jpeg" Stretch="Fill" Height="77" Width="104"/>
+        </Button>
+        <Button HorizontalAlignment="Left" Margin="291,439,0,0" VerticalAlignment="Top" Width="125" Height="97" Click="Button_Click" Background="White" >
+            <Image Source="WhatsApp Image 2023-02-27 at 20.39.04.jpeg" Stretch="Fill" Height="75" Width="115"/>
+        </Button>
+        <Button HorizontalAlignment="Left" Margin="483,439,0,0" VerticalAlignment="Top" Width="125" Height="97" Background="White">
+            <Image Source="invitados.jpeg" Stretch="Fill" Height="78" Width="101"/>
+        </Button>
+        <Button HorizontalAlignment="Left" Margin="678,439,0,0" VerticalAlignment="Top"  Width="125" Height="97" Background="White">
+            <Image Source="WhatsApp Image 2023-02-27 at 20.44.31.jpeg" Stretch="Fill" Height="74" Width="94"/>
+        </Button>
+        <TextBox HorizontalAlignment="Left" Height="20" Margin="248,309,0,0" TextWrapping="Wrap" Text="Ingresa tu fecha de Matrimonio:" VerticalAlignment="Top" Width="372" TextChanged="TextBox_TextChanged"/>
+    </Grid>
+</Window>
