@@ -21,5 +21,7 @@
             <Image Source="WhatsApp Image 2023-02-27 at 20.44.31.jpeg" Stretch="Fill" Height="74" Width="94"/>
         </Button>
         <TextBox HorizontalAlignment="Left" Height="20" Margin="248,309,0,0" TextWrapping="Wrap" Text="Ingresa tu fecha de Matrimonio:" VerticalAlignment="Top" Width="372" TextChanged="TextBox_TextChanged"/>
+        <Label Content="Próximas tareas:" HorizontalAlignment="Left" Margin="44,562,0,0" VerticalAlignment="Top" Height="32" Width="238" FontFamily="Mongolian Baiti" FontWeight="Bold" FontSize="20"/>
+        <ListBox HorizontalAlignment="Left" Height="186" Margin="44,599,0,0" VerticalAlignment="Top" Width="789" SelectionChanged="ListBox_SelectionChanged"/>
     </Grid>
 </Window>
