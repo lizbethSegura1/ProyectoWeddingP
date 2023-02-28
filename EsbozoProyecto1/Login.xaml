@@ -12,11 +12,11 @@
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <Label Grid.Row="0" Content="EMAIL" />
-        <TextBox Grid.Row="0" Name="Email" Margin="62,9.4,21.6,0.4"/>
-        <Label Grid.Row="1" Content="PASSWD" />
-        <TextBox Grid.Row="1" Name="Passwd" Margin="62,4.6,21.6,5.2"/>
-        <Button Grid.Row="2" Content="LOGIN" Margin="5,4.8,452.6,5" Click="OnLogin"/>
-        <Button Grid.Row="2" Content="CREATE USER" Margin="355,4.8,21.6,5" Click="OnCreateUser"/>
+        <Label Grid.Row="0" Content="Usuario:" FontFamily="Monotype Corsiva" FontSize="25" />
+        <TextBox Grid.Row="0" Name="Email" Margin="141,10,52.6,73"/>
+        <Label Grid.Row="1" Content="Contraseña:" FontSize="25" FontFamily="Monotype Corsiva" />
+        <TextBox Grid.Row="1" Name="Passwd" Margin="141,10,52.6,59"/>
+        <Button Grid.Row="1" Content="&#xD;&#xA;Entrar&#xD;&#xA;" Margin="178,135,411.6,96" Click="OnLogin" Grid.RowSpan="2" Background="#FFFFA3A3" FontWeight="Bold"/>
+        <Button Grid.Row="1" Content="&#xD;&#xA;Registrarse" Margin="461,135,129.6,96" Click="OnCreateUser" Grid.RowSpan="2" Background="#FFFFA3A3" FontWeight="Bold"/>
     </Grid>
 </Window>
