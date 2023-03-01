@@ -78,5 +78,9 @@ namespace EsbozoProyecto1
             }
         }
 
+        private void agregar_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
