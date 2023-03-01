@@ -12,8 +12,10 @@ namespace EsbozoProyecto1
     {
         public void CreateDB()
         {
+            //creacion de la bbdd
+            //creacion de la tabla users con 4 columnas 
             SQLiteConnection.CreateFile("wedding.sqlite");
-            using (var connection = new SQLiteConnection("Data Source=wedding.sqlite"))
+            using (var connection = new SQLiteConnection("Data Source=wedding.sqlite")) //conexion con ddbb y creacion del bin
             {
                 connection.Open();
                 var command = connection.CreateCommand();
@@ -23,7 +25,7 @@ namespace EsbozoProyecto1
                     passwd TEXT not null,
                     emailBoda TEXT 
                 );";
-                command.ExecuteNonQuery();
+                command.ExecuteNonQuery(); //ejecuta las querys
                 connection.Close();
 
             }
@@ -47,6 +49,8 @@ namespace EsbozoProyecto1
                 command.Parameters.AddWithValue("$passwd", password);
 
                 using (var reader = command.ExecuteReader())
+                // ExecuteReader() para ejecutar la consulta y devolver un objeto SQLiteDataReader,
+                // que se usa para leer los resultados devueltos por la consulta
                 {
                     while (reader.Read())
                     {

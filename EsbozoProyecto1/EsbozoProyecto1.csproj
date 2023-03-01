@@ -178,9 +178,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Captura.PNG" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="heart-529607_1280.jpg" />
   </ItemGroup>
   <ItemGroup>
