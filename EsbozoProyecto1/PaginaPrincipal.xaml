@@ -47,9 +47,7 @@
 
 
                     <Label Content="Mis Invitados" HorizontalAlignment="Left" Margin="23,34,0,0" VerticalAlignment="Top" FontFamily="Monotype Corsiva" FontWeight="Bold" FontSize="25" Height="39" Width="143"/>
-                    <ListBox x:Name="listBoxInvitados" HorizontalAlignment="Left" Height="251" Margin="23,146,0,-5" VerticalAlignment="Top" Width="739" SelectionChanged="ListBox_SelectionChanged"                            >
-                        <CheckBox Content="CheckBox"/>
-                    </ListBox>
+                    <ListBox x:Name="listBoxInvitados" HorizontalAlignment="Left" Height="251" Margin="23,146,0,-5" VerticalAlignment="Top" Width="739" SelectionChanged="ListBox_SelectionChanged"                            />
 
                     <Button x:Name="agregar" Content="Agregar" HorizontalAlignment="Left" Margin="143,100,0,0" VerticalAlignment="Top" Width="75" Click="OnClickAgregar"/>
                     <Button x:Name="eliminar" Content="Eliminar" HorizontalAlignment="Left" Margin="23,100,0,0" VerticalAlignment="Top" Width="75" Click="buttonEliminar_Click"/>

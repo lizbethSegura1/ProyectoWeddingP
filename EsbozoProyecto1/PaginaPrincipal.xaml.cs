@@ -136,26 +136,5 @@ namespace EsbozoProyecto1
             db.insertarInvitado(boda, nombre, false);
         }
 
-        private void checkBoxConfirmado_CheckedChanged(object sender, EventArgs e)
-        {
-            if (listBoxInvitados.SelectedIndex >= 0)
-            {
-                confirmarInvitado(listBoxInvitados.SelectedIndex, checkBoxConfirmado.IsChecked.Value);
-            }
-        }
-
-        private void confirmarInvitado(int indice, bool confirmado)
-        {
-            invitados[indice] = (confirmado ? "✔ " : "") + invitados[indice];
-            listBoxInvitados.Items[indice] = invitados[indice];
-        }
-
-        private void buttonConfirmar_Click(object sender, EventArgs e)
-        {
-            if (listBoxInvitados.SelectedIndex >= 0)
-            {
-                confirmarInvitado(listBoxInvitados.SelectedIndex, true);
-            }
-        }
     }
 }
