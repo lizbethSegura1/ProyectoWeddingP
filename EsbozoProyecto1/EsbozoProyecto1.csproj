@@ -100,6 +100,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="agregarInvitado.xaml.cs">
+      <DependentUpon>agregarInvitado.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ListaInvitados.xaml.cs">
       <DependentUpon>ListaInvitados.xaml</DependentUpon>
     </Compile>
@@ -116,6 +119,10 @@
       <DependentUpon>Tareas.xaml</DependentUpon>
     </Compile>
     <Compile Include="User.cs" />
+    <Page Include="agregarInvitado.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="ListaInvitados.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -187,9 +194,6 @@
     <Resource Include="matrimonio.jpeg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="137003.jpeg" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="proveedores.jpeg" />
   </ItemGroup>
   <ItemGroup>
@@ -200,6 +204,12 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="boton2.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="137003.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ImagenMain.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

@@ -11,7 +11,7 @@
         <ListBox x:Name="listBoxInvitados" HorizontalAlignment="Left" Height="319" Margin="23,78,0,0" VerticalAlignment="Top" Width="739" SelectionChanged="ListBox_SelectionChanged"/>
         <Button x:Name="agregar" Content="Agregar" HorizontalAlignment="Left" Margin="217,44,0,0" VerticalAlignment="Top" Width="75" Click="agregar_Click"/>
         <Button Content="Eliminar" HorizontalAlignment="Left" Margin="335,44,0,0" VerticalAlignment="Top" Width="75"/>
-        <CheckBox x:Name="checkBoxConfirmado" Content="Confirmado&#xD;&#xA;" HorizontalAlignment="Left" Margin="464,112,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="checkBoxConfirmado" Content="Confirmado&#xD;&#xA;" HorizontalAlignment="Left" Margin="565,110,0,0" VerticalAlignment="Top"/>
         <Button Content="Confirmar" HorizontalAlignment="Left" Margin="454,44,0,0" VerticalAlignment="Top" Width="75"/>
 
     </Grid>

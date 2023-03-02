@@ -47,11 +47,7 @@ namespace EsbozoProyecto1
 
         private void buttonAgregar_Click(object sender, EventArgs e)
         {
-            string nombre = Microsoft.VisualBasic.Interaction.InputBox("Ingrese el nombre del invitado:", "Agregar invitado", "");
-            if (!string.IsNullOrWhiteSpace(nombre))
-            {
-                agregarInvitado(nombre);
-            }
+          
         }
 
         private void buttonEliminar_Click(object sender, EventArgs e)
@@ -66,7 +62,7 @@ namespace EsbozoProyecto1
         {
             if (listBoxInvitados.SelectedIndex >= 0)
             {
-                confirmarInvitado(listBoxInvitados.SelectedIndex, checkBoxConfirmado.Checked);
+                confirmarInvitado(listBoxInvitados.SelectedIndex, checkBoxConfirmado.IsChecked.Value);
             }
         }
 
@@ -79,6 +75,18 @@ namespace EsbozoProyecto1
         }
 
         private void agregar_Click(object sender, RoutedEventArgs e)
+        {
+            agregarInvitado v = new agregarInvitado();
+            v.ShowDialog();
+            string nombre = v.Nombre;
+            if (!string.IsNullOrWhiteSpace(nombre))
+            {
+                agregarInvitado(nombre);
+            }
+
+        }
+
+        private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
         }

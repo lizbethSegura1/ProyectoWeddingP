@@ -5,18 +5,31 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EsbozoProyecto1"
         mc:Ignorable="d"
-        Title="Login" Height="450" Width="800">
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-        </Grid.RowDefinitions>
-        <Label Grid.Row="0" Content="Usuario:" FontFamily="Monotype Corsiva" FontSize="25" />
-        <TextBox Grid.Row="0" Name="Email" Margin="141,10,52.6,73"/>
-        <Label Grid.Row="1" Content="Contraseña:" FontSize="25" FontFamily="Monotype Corsiva" />
-        <TextBox Grid.Row="1" Name="Passwd" Margin="141,10,52.6,59"/>
-        <Button Grid.Row="1" Content="&#xD;&#xA;Entrar&#xD;&#xA;" Margin="178,135,411.6,96" Click="OnLogin" Grid.RowSpan="2" Background="#FFFFA3A3" FontWeight="Bold"/>
-        <Button Grid.Row="1" Content="&#xD;&#xA;Registrarse" Margin="461,135,129.6,96" Click="OnCreateUser" Grid.RowSpan="2" Background="#FFFFA3A3" FontWeight="Bold"/>
-    </Grid>
+        Title="Login" 
+        MaxWidth="800" MaxHeight="450" 
+        MinWidth="800" MinHeight="450">
+    <Canvas>
+        <StackPanel Canvas.Left="100" Canvas.Top="100">
+            <TextBlock Text="Usuario:" FontFamily="Monotype Corsiva" FontSize="25" />
+        </StackPanel>
+        
+        <StackPanel Canvas.Left="230" Canvas.Top="100">
+            <TextBox  Height="40" Width="500" x:Name="Email"/>
+        </StackPanel>
+
+        <StackPanel Canvas.Left="100" Canvas.Top="150">
+            <TextBlock Grid.Row="1" Text="Contraseña:" FontSize="25" FontFamily="Monotype Corsiva" />
+        </StackPanel>
+
+        <StackPanel Canvas.Left="230" Canvas.Top="150">
+            <PasswordBox  Height="40" Width="500" Name="Passwd"/>
+        </StackPanel>
+
+        <StackPanel Canvas.Left="150" Canvas.Top="300">
+            <Button Height="40" Width="200" Content="Ingresar"  Click="OnLogin" Background="#FFFABFB7" FontWeight="Bold" RenderTransformOrigin="0.369,3.026"/>
+        </StackPanel>
+        <StackPanel Canvas.Left="450" Canvas.Top="300">
+            <Button Height="40" Width="200" Content="Registrarse" Click="OnCreateUser" Grid.RowSpan="2" Background="#FFFABFB7" FontWeight="Bold"/>
+        </StackPanel>
+    </Canvas>
 </Window>

@@ -30,11 +30,15 @@ namespace EsbozoProyecto1
         private void OnLogin(object sender, RoutedEventArgs e)
         {
             
-            User u = db.getUser(Email.Text, Passwd.Text);
+            User u = db.getUser(Email.Text, Passwd.Password);
             if (u == null)
                 MessageBox.Show("Usuario no localizado");
             else
-                MessageBox.Show("Usuario encontrado");
+            {
+                PaginaPrincipal p = new PaginaPrincipal();
+                p.ShowDialog();
+            }
+               
         }
 
         private void OnCreateUser(object sender, RoutedEventArgs e)

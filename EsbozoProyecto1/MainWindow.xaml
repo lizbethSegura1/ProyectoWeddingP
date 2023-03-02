@@ -5,23 +5,23 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EsbozoProyecto1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="650" Width="468.902">
-    <Grid Margin="10,-52,3.4,21">
-        <TextBox HorizontalAlignment="Left" Height="42" Margin="15,54,-1,0" TextWrapping="Wrap" Text="Bienvenido a tu Organizador &#xD;&#xA;" VerticalAlignment="Top" Width="435"  RenderTransformOrigin="0.5,0.5" FontFamily="Times New Roman" FontSize="35">
-            <TextBox.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="-0.312"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </TextBox.RenderTransform>
-        </TextBox>
-        <Button Content="Comienza con tu día especial.." HorizontalAlignment="Left" Margin="60,602,0,0"
+        Title="MainWindow" MaxWidth="468" MaxHeight="650" 
+        MinWidth="468" MinHeight="650">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <TextBox Grid.Row="0" HorizontalAlignment="Left" Height="42"  TextWrapping="Wrap" Text="Bienvenido a tu Organizador &#xD;&#xA;" VerticalAlignment="Top" Width="435"  RenderTransformOrigin="0.5,0.5" FontFamily="Times New Roman" FontSize="35" Grid.RowSpan="2" Margin="24,-7,0,0"></TextBox>
+        <Button Grid.Row="1" Content="Inicia la planificación" HorizontalAlignment="Left"
 				Click = "OnClick"
-				VerticalAlignment="Top" Width="308" Height="39"  Background="#FFFABFB7" FontFamily="Myanmar Text" FontSize="22"/>
-        <TextBox HorizontalAlignment="Left" Height="65" Margin="10,529,0,0" TextWrapping="Wrap" Text="Planificar un día especial requiere herramientas especiales " VerticalAlignment="Top" Width="398" FontFamily="Times New Roman" FontSize="20"/>
-        <Image Margin="0,106,0,127" Source="matrimonio.jpeg" Stretch="Fill"/>
+			    Width="228"  Background="#FFFABFB7" FontFamily="Myanmar Text" FontSize="22" Margin="110,452,0,404.8" Grid.RowSpan="2"/>
+        <TextBox Grid.Row="1" HorizontalAlignment="Left" Height="65" TextWrapping="Wrap" Text="Planificar un día especial requiere herramientas especiales " VerticalAlignment="Top" Width="398" FontFamily="Times New Roman" FontSize="20" Margin="37,382,0,0"/>
+        <Image Grid.Row="1" Source="ImagenMain.png" Stretch="Fill" Margin="37,40,355.6,432.6"/>
+
 
     </Grid>
 </Window>

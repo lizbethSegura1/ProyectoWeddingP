@@ -127,7 +127,6 @@ C:\Users\lizbeth\Source\Repos\lizbethSegura1\ProyectoWeddingP\EsbozoProyecto1\bi
 C:\Users\lizbeth\Source\Repos\lizbethSegura1\ProyectoWeddingP\EsbozoProyecto1\bin\Debug\System.Memory.xml
 C:\Users\lizbeth\Source\Repos\lizbethSegura1\ProyectoWeddingP\EsbozoProyecto1\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\lizbeth\Source\Repos\lizbethSegura1\ProyectoWeddingP\EsbozoProyecto1\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
-C:\Users\lizbeth\Source\Repos\lizbethSegura1\ProyectoWeddingP\EsbozoProyecto1\obj\Debug\EsbozoProyecto1.csproj.AssemblyReference.cache
 C:\Users\lizbeth\Source\Repos\lizbethSegura1\ProyectoWeddingP\EsbozoProyecto1\obj\Debug\NewUser.g.cs
 C:\Users\lizbeth\Source\Repos\lizbethSegura1\ProyectoWeddingP\EsbozoProyecto1\obj\Debug\Login.g.cs
 C:\Users\lizbeth\Source\Repos\lizbethSegura1\ProyectoWeddingP\EsbozoProyecto1\obj\Debug\MainWindow.g.cs
@@ -145,3 +144,11 @@ C:\Users\lizbeth\Source\Repos\lizbethSegura1\ProyectoWeddingP\EsbozoProyecto1\ob
 C:\Users\lizbeth\Source\Repos\lizbethSegura1\ProyectoWeddingP\EsbozoProyecto1\obj\Debug\EsbozoProyecto1.csproj.CopyComplete
 C:\Users\lizbeth\Source\Repos\lizbethSegura1\ProyectoWeddingP\EsbozoProyecto1\obj\Debug\EsbozoProyecto1.exe
 C:\Users\lizbeth\Source\Repos\lizbethSegura1\ProyectoWeddingP\EsbozoProyecto1\obj\Debug\EsbozoProyecto1.pdb
+C:\Users\lizbeth\source\repos\lizbethSegura1\ProyectoWeddingP\EsbozoProyecto1\obj\Debug\agregarInvitado.g.cs
+C:\Users\lizbeth\source\repos\lizbethSegura1\ProyectoWeddingP\EsbozoProyecto1\obj\Debug\ListaInvitados.g.cs
+C:\Users\lizbeth\source\repos\lizbethSegura1\ProyectoWeddingP\EsbozoProyecto1\obj\Debug\PaginaPrincipal.g.cs
+C:\Users\lizbeth\source\repos\lizbethSegura1\ProyectoWeddingP\EsbozoProyecto1\obj\Debug\Tareas.g.cs
+C:\Users\lizbeth\source\repos\lizbethSegura1\ProyectoWeddingP\EsbozoProyecto1\obj\Debug\agregarInvitado.baml
+C:\Users\lizbeth\source\repos\lizbethSegura1\ProyectoWeddingP\EsbozoProyecto1\obj\Debug\ListaInvitados.baml
+C:\Users\lizbeth\source\repos\lizbethSegura1\ProyectoWeddingP\EsbozoProyecto1\obj\Debug\PaginaPrincipal.baml
+C:\Users\lizbeth\source\repos\lizbethSegura1\ProyectoWeddingP\EsbozoProyecto1\obj\Debug\Tareas.baml

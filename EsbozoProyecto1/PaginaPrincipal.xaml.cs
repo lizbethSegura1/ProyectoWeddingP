@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
+
 namespace EsbozoProyecto1
 {
     /// <summary>
@@ -24,14 +25,21 @@ namespace EsbozoProyecto1
             InitializeComponent();
         }
 
+        private void OnTabButtonClick(object sender, RoutedEventArgs e)
+        {
+            Button button = (Button)sender;
+            int index = int.Parse(button.Content.ToString().Substring(button.Content.ToString().Length - 1)) - 1;
+            tabControl.SelectedIndex = index;
+        }
         private void Button_Click(object sender, RoutedEventArgs e)
-        {-
-
+        {
+            
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+            private void TabInvitados(object sender, RoutedEventArgs e)
         {
-
+            ListaInvitados miClase = new ListaInvitados(); //llamada a la clase listaInvitados
+            
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)

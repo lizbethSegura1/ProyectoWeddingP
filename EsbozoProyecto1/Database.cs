@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SQLite;
+using System.IO;
 
 namespace EsbozoProyecto1
 {
@@ -12,6 +13,8 @@ namespace EsbozoProyecto1
     {
         public void CreateDB()
         {
+            if(File.Exists("wedding.sqlite"))
+                return;
             SQLiteConnection.CreateFile("wedding.sqlite");
             using (var connection = new SQLiteConnection("Data Source=wedding.sqlite"))
             {
