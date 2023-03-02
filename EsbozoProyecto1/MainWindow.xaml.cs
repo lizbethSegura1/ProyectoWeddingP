@@ -26,6 +26,8 @@ namespace EsbozoProyecto1
             InitializeComponent();
             db = new Database();
             db.CreateDB();
+
+
         }
 
         private void OnClick(object sender, RoutedEventArgs e) {

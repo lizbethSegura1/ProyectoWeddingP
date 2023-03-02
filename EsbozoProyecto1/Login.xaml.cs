@@ -35,7 +35,7 @@ namespace EsbozoProyecto1
                 MessageBox.Show("Usuario no localizado");
             else
             {
-                PaginaPrincipal p = new PaginaPrincipal();
+                PaginaPrincipal p = new PaginaPrincipal(u.Email);
                 p.ShowDialog();
             }
                

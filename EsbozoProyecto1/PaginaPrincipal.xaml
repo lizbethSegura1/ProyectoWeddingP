@@ -5,16 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EsbozoProyecto1"
         mc:Ignorable="d"
-        Title="PaginaPrincipal" Height="866.054" Width="1200">
+        Title="PaginaPrincipal" Height="450" Width="800"
+        >
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="67*"/>
+            <ColumnDefinition Width="1127*"/>
+        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
 
-        <TabControl Grid.Row="1" Name="tabControl">
-            <TabItem Header="Inicio 1">
+        <TabControl Grid.Row="1" Name="tabControl" Grid.ColumnSpan="2" >
+            <TabItem x:Name="tabInicio" Header="Inicio 1" TabIndex="0">
                 <!-- contenido del tab 1 -->
                 <Grid>
                     <Grid.RowDefinitions>
@@ -22,41 +27,38 @@
                         <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
                     <StackPanel Width="1200" Height="200" VerticalAlignment="Center" Orientation="Horizontal" HorizontalAlignment="Center">
-                        <Button x:Name="botonInicio" Content="Inicio 1" Margin="50" Click="OnTabButtonClick" Width="125" Height="97" Background="White"/>
-                        <Button x:Name="botonProveedores" Content="Proveedores 2" Margin="50" Click="OnTabButtonClick" Width="125" Height="97" Background="White"/>
-                        <Button x:Name="botonTareas" Content="Tareas 3"  Margin="50" Click="OnTabButtonClick" Width="125" Height="97" Background="White"/>
-                        <Button x:Name="botonInvitados" Content="Invitados 4" Margin="50" Click="OnTabButtonClick" Width="125" Height="97"  Background="White"/>
-                        <Button x:Name="botonPresupuesto" Content="Presupuesto 5" Margin="50" Click="OnTabButtonClick"  Width="125" Height="97"  Background="White"/>
+                        <Button x:Name="botonInicio" Content="Inicio" Margin="30" Click="OnTabButtonClick" Width="125" Height="97" Background="White"/>
+                        <Button x:Name="botonProveedores" Content="Proveedores" Margin="50" Click="OnTabButtonClick" Width="125" Height="97" Background="White"/>
+                        <Button x:Name="botonTareas" Content="Tareas"  Margin="30" Click="OnTabButtonClick" Width="125" Height="97" Background="White"/>
+                        <Button x:Name="botonInvitados" Content="Invitados" Margin="30" Click="OnTabButtonClick" Width="125" Height="97"  Background="White"/>
+                        <Button x:Name="botonPresupuesto" Content="Presupuesto" Margin="30" Click="OnTabButtonClick"  Width="125" Height="97"  Background="White"/>
                     </StackPanel>
                 </Grid>
             </TabItem>
-            <TabItem Header="Proveedores 2">
+            <TabItem x:Name="tabProveedores" Header="Proveedores"  TabIndex="1">
                 <!-- contenido del tab 1 -->
             </TabItem>
-            <TabItem Header="Tareas 3">
+            <TabItem x:Name="tabTareas" Header="Tareas"  TabIndex="2">
                 <!-- contenido del tab 2 -->
             </TabItem>
-            <TabItem x:Name="tabInvitados" Header="Invitados 4">
+            <TabItem x:Name="tabInvitados" Header="Invitados"  TabIndex="3">
                 <!-- contenido del tab 3 -->
                 <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="143*"/>
-                        <ColumnDefinition Width="13*"/>
-                        <ColumnDefinition Width="438*"/>
-                    </Grid.ColumnDefinitions>
+
+
                     <Label Content="Mis Invitados" HorizontalAlignment="Left" Margin="23,34,0,0" VerticalAlignment="Top" FontFamily="Monotype Corsiva" FontWeight="Bold" FontSize="25" Height="39" Width="143"/>
-                    <ListBox x:Name="listBoxInvitados" HorizontalAlignment="Left" Height="319" Margin="23,78,0,0" VerticalAlignment="Top" Width="739" SelectionChanged="ListBox_SelectionChanged" Grid.ColumnSpan="3"/>
-                    <Button x:Name="agregar" Content="Agregar" HorizontalAlignment="Left" Margin="217,44,0,0" VerticalAlignment="Top" Width="75" Grid.ColumnSpan="2"/>
-                    <Button Content="Eliminar" HorizontalAlignment="Left" Margin="23.1,44,0,0" VerticalAlignment="Top" Width="75" Grid.Column="2"/>
-                    <CheckBox x:Name="checkBoxConfirmado" Content="Confirmado&#xD;&#xA;" HorizontalAlignment="Left" Margin="253.1,110,0,0" VerticalAlignment="Top" Grid.Column="2"/>
-                    <Button Content="Confirmar" HorizontalAlignment="Left" Margin="142.1,44,0,0" VerticalAlignment="Top" Width="75" Grid.Column="2"/>
+                    <ListBox x:Name="listBoxInvitados" HorizontalAlignment="Left" Height="251" Margin="23,146,0,-5" VerticalAlignment="Top" Width="739" SelectionChanged="ListBox_SelectionChanged"                            >
+                        <CheckBox Content="CheckBox"/>
+                    </ListBox>
+
+                    <Button x:Name="agregar" Content="Agregar" HorizontalAlignment="Left" Margin="143,100,0,0" VerticalAlignment="Top" Width="75" Click="OnClickAgregar"/>
+                    <Button x:Name="eliminar" Content="Eliminar" HorizontalAlignment="Left" Margin="23,100,0,0" VerticalAlignment="Top" Width="75" Click="buttonEliminar_Click"/>
 
                 </Grid>
             </TabItem>
-            <TabItem Header="Presupuesto 4">
-                <!-- contenido del tab 3 -->
+            <TabItem x:Name="tabPresupuesto" Header="Presupuesto"  TabIndex="4">
+                <!-- contenido del tab 2 -->
             </TabItem>
         </TabControl>
-
     </Grid>
 </Window>

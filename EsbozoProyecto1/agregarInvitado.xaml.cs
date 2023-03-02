@@ -24,7 +24,7 @@ namespace EsbozoProyecto1
             InitializeComponent();
         }
 
-        private String nombre;
+        public String nombre;
         public string Nombre { get => nombre; set => nombre = value; }
 
         private void Button_Click(object sender, RoutedEventArgs e)

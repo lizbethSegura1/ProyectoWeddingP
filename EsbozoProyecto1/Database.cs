@@ -27,6 +27,51 @@ namespace EsbozoProyecto1
                     emailBoda TEXT 
                 );";
                 command.ExecuteNonQuery();
+                command.CommandText = @"CREATE TABLE IF NOT EXISTS invitados ( 
+                    boda TEXT not null,
+                    name TEXT not null,
+                    confirmado TEXT
+                );";
+                command.ExecuteNonQuery();
+                connection.Close();
+
+            }
+        }
+
+        public void insertarInvitado(String boda, String invitado, Boolean confirmado)
+        {
+            using (var connection = new SQLiteConnection("Data Source=wedding.sqlite"))
+            {
+                connection.Open();
+
+                var command = connection.CreateCommand();
+                command.CommandText =
+                @"
+                insert into invitados(boda, name, confirmado) values ($boda, $invitado, $confirmado)
+                ";
+                command.Parameters.AddWithValue("$boda", boda);
+                command.Parameters.AddWithValue("$invitado", invitado);
+                command.Parameters.AddWithValue("$confirmado", confirmado ? "SI" : "NO");
+                command.ExecuteNonQuery();
+                connection.Close();
+
+            }
+        }
+
+        public void eliminarInvitado(String boda, String invitado)
+        {
+            using (var connection = new SQLiteConnection("Data Source=wedding.sqlite"))
+            {
+                connection.Open();
+
+                var command = connection.CreateCommand();
+                command.CommandText =
+                @"
+                delete from invitados where boda =$boda and name=$invitado
+                ";
+                command.Parameters.AddWithValue("$boda", boda);
+                command.Parameters.AddWithValue("$invitado", invitado);
+                command.ExecuteNonQuery();
                 connection.Close();
 
             }
@@ -66,6 +111,40 @@ namespace EsbozoProyecto1
             }
 
             return user;
+
+        }
+        public List<String> getInvitados(String boda)
+        {
+            List<String> l = new List<String>();
+
+            using (var connection = new SQLiteConnection("Data Source=wedding.sqlite"))
+            {
+                connection.Open();
+
+                var command = connection.CreateCommand();
+                command.CommandText =
+                @"
+                SELECT name
+                FROM invitados
+                WHERE boda = $boda
+                ";
+                command.Parameters.AddWithValue("$boda", boda);
+                
+
+                using (var reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        var name = reader.GetString(0);
+                        l.Add(name);
+
+                        
+                    }
+                }
+                connection.Close();
+            }
+
+            return l;
 
         }
 

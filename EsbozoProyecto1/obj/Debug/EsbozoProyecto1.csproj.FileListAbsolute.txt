@@ -152,3 +152,4 @@ C:\Users\lizbeth\source\repos\lizbethSegura1\ProyectoWeddingP\EsbozoProyecto1\ob
 C:\Users\lizbeth\source\repos\lizbethSegura1\ProyectoWeddingP\EsbozoProyecto1\obj\Debug\ListaInvitados.baml
 C:\Users\lizbeth\source\repos\lizbethSegura1\ProyectoWeddingP\EsbozoProyecto1\obj\Debug\PaginaPrincipal.baml
 C:\Users\lizbeth\source\repos\lizbethSegura1\ProyectoWeddingP\EsbozoProyecto1\obj\Debug\Tareas.baml
+C:\Users\lizbeth\source\repos\lizbethSegura1\ProyectoWeddingP\EsbozoProyecto1\obj\Debug\EsbozoProyecto1.csproj.AssemblyReference.cache
