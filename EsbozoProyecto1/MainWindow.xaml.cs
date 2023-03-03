@@ -32,7 +32,7 @@ namespace EsbozoProyecto1
 
         private void OnClick(object sender, RoutedEventArgs e) {
             Login login = new Login();
-            login.ShowDialog();
+            login.Show();
             this.Close();
         } 
 

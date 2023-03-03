@@ -1,31 +1,53 @@
-﻿<Window x:Name="Apúntate_gratis___" x:Class="EsbozoProyecto1.NewUser"
+﻿<Window x:Name="Apúntate_gratis" 
+        x:Class="EsbozoProyecto1.NewUser"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EsbozoProyecto1"
         mc:Ignorable="d"
-        Title="New User" Height="450" Width="800" FontFamily="Monotype Corsiva" FontSize="22" Background="White">
+        Title="Usuario Nuevo" Height="380" Width="700"
+        MaxWidth="380" MaxHeight="380" 
+        MinWidth="700" MinHeight="380">
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="82*"/>
-            <ColumnDefinition Width="711*"/>
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-        </Grid.RowDefinitions>
-        <Label Grid.Row="0" Content="Usuario" Grid.ColumnSpan="2" Margin="0,0,-0.4,104.4" Grid.RowSpan="2" />
-        <TextBox Grid.Row="0" Name="Name" Margin="103.683,20,68.6,49.6" Grid.Column="1"/>
-        <Label Grid.Row="1" Content="Email" Grid.ColumnSpan="2" Margin="0,0.4,-0.4,0.4" />
-        <TextBox Grid.Row="1" Name="Email" Margin="103.683,10.4,68.6,49.4" Grid.Column="1"/>
-        <Label Grid.Row="1" Content="Contraseña" Grid.ColumnSpan="2" Margin="0,104.4,-0.4,0.2" Grid.RowSpan="2"/>
-        <TextBox Grid.Row="2" Name="Passwd" Margin="103.683,9.6,68.6,52.2" Grid.Column="1"/>
-        <Label Grid.Row="2" Content="Si usted es invitado&#xD;&#xA;indique el correo de" Grid.ColumnSpan="2" Margin="0,104.6,-0.4,0" Grid.RowSpan="2" />
-        <TextBox Grid.Row="3" Name="Boda" Margin="103.6,21,66.6,35" Grid.Column="1"/>
-        <Button  Grid.Row="4"  Content="Registrar" Margin="193.6,21,300.6,21" Grid.Column="1" FontFamily="Arial" Click="OnCreateUser"/>
+        <Canvas>
+        <StackPanel Canvas.Left="120" Canvas.Top="50" Width="100" Height="30" VerticalAlignment="Center" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Label  Content="Usuario" />
+        </StackPanel>
+
+        <StackPanel Canvas.Left="250" Canvas.Top="50" Width="150" Height="30" VerticalAlignment="Center" Orientation="Horizontal" HorizontalAlignment="Center">
+                <TextBox  Name="Name" Width="150" Height="30"/>
+        </StackPanel>
+
+            <StackPanel Canvas.Left="120" Canvas.Top="100" Width="100" Height="30" VerticalAlignment="Center" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Label  Content="Email" />
+        </StackPanel>
+
+            <StackPanel Canvas.Left="250" Canvas.Top="100" Width="150" Height="30" VerticalAlignment="Center" Orientation="Horizontal" HorizontalAlignment="Center">
+                <TextBox  Name="Email" Width="150" Height="30"/>
+        </StackPanel>
+        <StackPanel Canvas.Left="120" Canvas.Top="150" Width="100" Height="30" VerticalAlignment="Center" Orientation="Horizontal" HorizontalAlignment="Center">
+                <Label  Content="Contraseña" Width="100" Height="30"/>
+        </StackPanel>
+
+            <StackPanel Canvas.Left="250" Canvas.Top="150" Width="150" Height="30" VerticalAlignment="Center" Orientation="Horizontal" HorizontalAlignment="Center">
+                <TextBox Name="Passwd" Width="150" Height="30" />
+        </StackPanel>
+
+            <StackPanel Canvas.Left="120" Canvas.Top="200" Width="100" Height="30" VerticalAlignment="Center" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Label  Content="Email oficiante"  />
+        </StackPanel>
+
+            <StackPanel Canvas.Left="250" Canvas.Top="200" Width="150" Height="30" VerticalAlignment="Center" Orientation="Horizontal" HorizontalAlignment="Center">
+                <TextBox  Name="Boda" Width="150" Height="30"/>
+        </StackPanel>
+
+        <StackPanel Canvas.Left="180" Canvas.Top="280" Width="100" Height="45" VerticalAlignment="Center" Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button Content="Registrar" FontFamily="Arial" Background="#FFFABFB7" Click="OnCreateUser" Width="100"/>
+        </StackPanel>
+            <StackPanel Canvas.Left="420" Canvas.Top="280" Width="100" Height="45" VerticalAlignment="Center" Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button x:Name="cancelar" Content="Cancelar" FontFamily="Arial" Background="#FFFABFB7"  Width="100"/>
+            </StackPanel>
+        </Canvas>
     </Grid>
 </Window>

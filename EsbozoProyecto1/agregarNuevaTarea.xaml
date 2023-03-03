@@ -5,10 +5,25 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EsbozoProyecto1"
         mc:Ignorable="d"
-        Title="agregarNuevaTarea" Height="450" Width="800">
+        Title="agregarNuevaTarea" Height="380" Width="700"
+        MaxWidth="380" MaxHeight="380" 
+        MinWidth="700" MinHeight="380">
     <Grid>
-        <TextBox x:Name="tareaNueva" HorizontalAlignment="Left" Height="23" Margin="281,40,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <Label  x:Name="rptTarea" Content="Indica cual es la nueva tarea" HorizontalAlignment="Left" Margin="85,36,0,0" VerticalAlignment="Top"/>
-        <Button Content="Enviar" HorizontalAlignment="Left" Background="#FFFABFB7" Margin="315,195,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+        <Canvas>
+            <StackPanel Canvas.Left="220" Canvas.Top="100" Width="200" Height="30" VerticalAlignment="Center" Orientation="Horizontal" HorizontalAlignment="Center">
+                <TextBox x:Name="tareaNueva" HorizontalAlignment="Left" Height="30"   VerticalAlignment="Top" Width="200"/>
+            </StackPanel>
+
+            <StackPanel Canvas.Left="220" Canvas.Top="50" Width="200" Height="30" VerticalAlignment="Center" Orientation="Horizontal" HorizontalAlignment="Center">
+                <Label  x:Name="rptTarea" Content="Indica cual es la nueva tarea" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            </StackPanel>
+
+            <StackPanel Canvas.Left="180" Canvas.Top="200" Width="100" Height="30" VerticalAlignment="Center" Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button Content="Enviar" Background="#FFFABFB7" Width="100" Click="Button_Click"/>
+            </StackPanel>
+            <StackPanel Canvas.Left="380" Canvas.Top="200" Width="100" Height="30" VerticalAlignment="Center" Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button Content="Cancelar" Background="#FFFABFB7"    Width="100"/>
+            </StackPanel>
+        </Canvas>
     </Grid>
 </Window>

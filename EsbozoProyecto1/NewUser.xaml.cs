@@ -40,5 +40,7 @@ namespace EsbozoProyecto1
             Close();
        
         }
+
+
     }
 }

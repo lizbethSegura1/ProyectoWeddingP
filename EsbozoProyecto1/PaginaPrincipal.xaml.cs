@@ -19,11 +19,15 @@ namespace EsbozoProyecto1
     /// </summary>
     public partial class PaginaPrincipal : Window
     {
-        public PaginaPrincipal(String boda)
+        public PaginaPrincipal(String boda, DateTime fecha)
         {
             InitializeComponent();
             tabControl.SelectionChanged += MyTabControl_SelectionChanged;
             this.boda = boda;
+            FechaBoda.SelectedDate = fecha;
+           // CalcularCuentaRegresiva();
+
+
 
         }
 
@@ -43,6 +47,7 @@ namespace EsbozoProyecto1
             switch (selectedItem.Name)
             {
                 case "tabInicio":
+                    CalcularCuentaRegresiva();
                     
                     break;
                 case "tabProveedores":
@@ -106,6 +111,29 @@ namespace EsbozoProyecto1
 
         }
 
+        private void GuardarFecha(object sender, RoutedEventArgs e)
+        {
+            DateTime fechaBoda = FechaBoda.SelectedDate.Value;
+            db.guardarFecha(boda,fechaBoda);
+        }
+
+        private void CalcularCuentaRegresiva()
+        {
+            if (FechaBoda.SelectedDate == null)
+            {
+                CuentaRegresiva.Text = "FECHA NO FIJADA";
+                return;
+            }
+            DateTime fechaBoda = FechaBoda.SelectedDate.Value;
+            TimeSpan tiempoRestante = fechaBoda - DateTime.Now;
+            CuentaRegresiva.Text = string.Format("Faltan {0} días, {1} horas, {2} minutos y {3} segundos para la boda.", tiempoRestante.Days, tiempoRestante.Hours, tiempoRestante.Minutes, tiempoRestante.Seconds);
+        }
+
+        private void MiMetodoLoaded(object sender, RoutedEventArgs e)
+        {
+            CalcularCuentaRegresiva();
+        }
+
         private void eliminarInvitado(int indice)
         {
             
@@ -124,11 +152,17 @@ namespace EsbozoProyecto1
         private void OnClickAgregar(object sender, RoutedEventArgs e)
         {
             agregarInvitado ag = new agregarInvitado();
-            ag.ShowDialog();
+            ag.Show();
             agregarInvitado(ag.Nombre);
+            Close();
         }
 
-        private void eliminarTarea(int indice)
+       
+        private void OnClickCancelar(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+            private void eliminarTarea(int indice)
         {
 
             String tarea = listBoxTareas.Items.GetItemAt(indice) as String;

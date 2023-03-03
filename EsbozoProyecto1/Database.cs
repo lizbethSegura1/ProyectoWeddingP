@@ -23,8 +23,9 @@ namespace EsbozoProyecto1
                 command.CommandText = @"CREATE TABLE IF NOT EXISTS users ( 
                     name TEXT not null,
                     email TEXT not null,
-                    passwd TEXT not null,
-                    emailBoda TEXT 
+                    passwd TEXT ,
+                    emailBoda TEXT, 
+                    fecha DATE
                 );";
                 command.ExecuteNonQuery();
                 command.CommandText = @"CREATE TABLE IF NOT EXISTS invitados ( 
@@ -44,7 +45,27 @@ namespace EsbozoProyecto1
             }
         }
 
-        public void insertarInvitado(String boda, String invitado, Boolean confirmado)
+        public void guardarFecha(String boda, DateTime fecha)
+        {
+
+            using (var connection = new SQLiteConnection("Data Source=wedding.sqlite"))
+            {
+                connection.Open();
+                var command = connection.CreateCommand();
+                command.CommandText =
+                @"
+                update  users set fecha=$fecha where email=$boda
+                ";
+                command.Parameters.AddWithValue("$boda", boda);
+                String fechaFmt = fecha.ToString("yyyy-MM-dd HH:mm:ss");
+                command.Parameters.AddWithValue("$fecha", fechaFmt); // yyyy-MM-dd HH:mm:ss
+                command.ExecuteNonQuery();
+
+                connection.Close();
+
+            }
+        }
+            public void insertarInvitado(String boda, String invitado, Boolean confirmado)
         {
             using (var connection = new SQLiteConnection("Data Source=wedding.sqlite"))
             {
@@ -134,7 +155,7 @@ namespace EsbozoProyecto1
                 var command = connection.CreateCommand();
                 command.CommandText =
                 @"
-                SELECT name
+                SELECT name, fecha
                 FROM users
                 WHERE email = $email and passwd = $passwd
                 ";
@@ -146,10 +167,12 @@ namespace EsbozoProyecto1
                     while (reader.Read())
                     {
                         var name = reader.GetString(0);
+                        var fech = reader.GetDateTime(1);
                         user = new User();
                         user.Email = email;
                         user.Nombre = name;
                         user.Password = password;
+                        user.Fecha = fech;
 
                         Console.WriteLine($"Hello, {name}!");
                     }

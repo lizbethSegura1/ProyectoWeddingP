@@ -20,7 +20,7 @@
 				Click = "OnClick"
 			    Width="228"  Background="#FFFABFB7" FontFamily="Myanmar Text" FontSize="22" Margin="110,452,0,404.8" Grid.RowSpan="2"/>
         <TextBox Grid.Row="1" HorizontalAlignment="Left" Height="65" TextWrapping="Wrap" Text="Planificar un día especial requiere herramientas especiales " VerticalAlignment="Top" Width="398" FontFamily="Times New Roman" FontSize="20" Margin="37,382,0,0"/>
-        <Image Grid.Row="1" Source="ImagenMain.png" Stretch="Fill" Margin="37,40,355.6,432.6"/>
+       
 
 
     </Grid>
