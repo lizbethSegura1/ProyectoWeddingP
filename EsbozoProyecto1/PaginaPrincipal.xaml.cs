@@ -29,7 +29,7 @@ namespace EsbozoProyecto1
 
         private String boda;
 
-
+        Database db = new Database();
         private void MyTabControl_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
            
@@ -49,14 +49,20 @@ namespace EsbozoProyecto1
                     // Agregar los controles necesarios dentro del TabItem2
                     break;
                 case "tabTareas":
-                    // Agregar los controles necesarios dentro del TabItem3
+                    if (listBoxTareas.Items.Count > 0)
+                        break;
+                    
+                    tareas = db.getTarea(boda);
+                    listBoxTareas.Items.Clear();
+                    foreach (String s in tareas)
+                        listBoxTareas.Items.Add(s);
                     break;
                 case "tabInvitados":
                     // Agregar los controles necesarios dentro del TabItem4
                     if (listBoxInvitados.Items.Count > 0)
                         break;
-                    Database DB = new Database();
-                    invitados = DB.getInvitados(boda);
+                   
+                    invitados = db.getInvitados(boda);
                     listBoxInvitados.Items.Clear();
                     foreach (String s in invitados)
                         listBoxInvitados.Items.Add(s);
@@ -69,13 +75,8 @@ namespace EsbozoProyecto1
                     break;
             }
         }
-        /*
-        private void tabControl_selecredIndexChanged(object sender, RoutedEventArgs e)
-        {
-            tabControl.SelectedIndex+
-            ActualizarInterfaz();
-        }
-        */
+        
+        
         private void OnTabButtonClick(object sender, RoutedEventArgs e)
         {
             Button btn = sender as Button;
@@ -87,6 +88,12 @@ namespace EsbozoProyecto1
                     tabControl.SelectedIndex = 3;
                     
                    
+                    break;
+                case "botonTareas":
+
+                    tabControl.SelectedIndex = 2;
+
+
                     break;
 
 
@@ -101,7 +108,7 @@ namespace EsbozoProyecto1
 
         private void eliminarInvitado(int indice)
         {
-            Database db = new Database();
+            
             String invitado = listBoxInvitados.Items.GetItemAt(indice) as String;
             db.eliminarInvitado(boda, invitado );
             invitados.RemoveAt(indice);
@@ -119,11 +126,38 @@ namespace EsbozoProyecto1
             agregarInvitado ag = new agregarInvitado();
             ag.ShowDialog();
             agregarInvitado(ag.Nombre);
-
-
         }
 
+        private void eliminarTarea(int indice)
+        {
+
+            String tarea = listBoxTareas.Items.GetItemAt(indice) as String;
+            db.eliminarTarea(boda, tarea);
+            tareas.RemoveAt(indice);
+            listBoxTareas.Items.RemoveAt(indice);
+        }
+
+        private void OnClickTareaRealizada(object sender, RoutedEventArgs e)
+        {
+            {
+                if (listBoxTareas.SelectedIndex >= 0)
+                {
+                    eliminarTarea(listBoxTareas.SelectedIndex);
+                }
+            };
+        }
+        
+
+        private void OnClickNuevaTarea(object sender, RoutedEventArgs e)
+        {
+            agregarNuevaTarea ag = new agregarNuevaTarea();
+            ag.ShowDialog();
+            AgregarTarea(ag.Nombre);
+        }
+
+
         private List<string> invitados = new List<string>();
+        private List<string> tareas = new List<string>();
 
         public string Boda { get => boda; set => boda = value; }
         public string Boda1 { get => boda; set => boda = value; }
@@ -132,9 +166,18 @@ namespace EsbozoProyecto1
         {
             invitados.Add(nombre);
             listBoxInvitados.Items.Add(nombre);
-            Database db = new Database();
             db.insertarInvitado(boda, nombre, false);
         }
 
+        private void AgregarTarea(string nombre)
+        {
+            tareas.Add(nombre);
+            listBoxTareas.Items.Add(nombre);
+            db.insertarTarea(boda,nombre, false);
+        }
+        private void tabControl_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }

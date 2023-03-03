@@ -103,6 +103,9 @@
     <Compile Include="agregarInvitado.xaml.cs">
       <DependentUpon>agregarInvitado.xaml</DependentUpon>
     </Compile>
+    <Compile Include="agregarNuevaTarea.xaml.cs">
+      <DependentUpon>agregarNuevaTarea.xaml</DependentUpon>
+    </Compile>
     <Compile Include="NewUser.xaml.cs">
       <DependentUpon>NewUser.xaml</DependentUpon>
     </Compile>
@@ -117,6 +120,10 @@
     </Compile>
     <Compile Include="User.cs" />
     <Page Include="agregarInvitado.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="agregarNuevaTarea.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

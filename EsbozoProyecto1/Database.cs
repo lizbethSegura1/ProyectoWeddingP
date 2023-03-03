@@ -33,6 +33,12 @@ namespace EsbozoProyecto1
                     confirmado TEXT
                 );";
                 command.ExecuteNonQuery();
+                command.CommandText = @"CREATE TABLE IF NOT EXISTS tareas ( 
+                    boda TEXT not null,
+                    tarea TEXT not null,
+                    confirmado TEXT
+                );";
+                command.ExecuteNonQuery();
                 connection.Close();
 
             }
@@ -71,6 +77,47 @@ namespace EsbozoProyecto1
                 ";
                 command.Parameters.AddWithValue("$boda", boda);
                 command.Parameters.AddWithValue("$invitado", invitado);
+                command.ExecuteNonQuery();
+                connection.Close();
+
+            }
+        }
+
+
+        // tareas
+        public void insertarTarea(String boda, String tarea,Boolean confirmado)
+        {
+            using (var connection = new SQLiteConnection("Data Source=wedding.sqlite"))
+            {
+                connection.Open();
+
+                var command = connection.CreateCommand();
+                command.CommandText =
+                @"
+                insert into tareas(boda,tarea,confirmado) values ($boda,$tarea, $confirmado)
+                ";
+                command.Parameters.AddWithValue("$boda", boda);
+                command.Parameters.AddWithValue("$tarea", tarea);
+                command.Parameters.AddWithValue("$confirmado", confirmado ? "SI" : "NO");
+                command.ExecuteNonQuery();
+                connection.Close();
+
+            }
+        }
+
+        public void eliminarTarea(String boda, String tarea)
+        {
+            using (var connection = new SQLiteConnection("Data Source=wedding.sqlite"))
+            {
+                connection.Open();
+
+                var command = connection.CreateCommand();
+                command.CommandText =
+                @"
+                delete from tareas where boda =$boda and tarea=$tarea
+                ";
+                command.Parameters.AddWithValue("$boda", boda);
+                command.Parameters.AddWithValue("$tarea", tarea);
                 command.ExecuteNonQuery();
                 connection.Close();
 
@@ -145,6 +192,41 @@ namespace EsbozoProyecto1
             }
 
             return l;
+
+        }
+
+        public List<String> getTarea(String boda)
+        {
+            List<String> tareas = new List<String>();
+
+            using (var connection = new SQLiteConnection("Data Source=wedding.sqlite"))
+            {
+                connection.Open();
+
+                var command = connection.CreateCommand();
+                command.CommandText =
+                @"
+                SELECT tarea
+                FROM tareas
+                WHERE boda = $boda and confirmado='NO'
+                ";
+                command.Parameters.AddWithValue("$boda", boda);
+
+
+                using (var reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        var name = reader.GetString(0);
+                        tareas.Add(name);
+
+
+                    }
+                }
+                connection.Close();
+            }
+
+            return tareas;
 
         }
 

@@ -1,15 +1,14 @@
-﻿<Window x:Class="EsbozoProyecto1.agregarInvitado"
+﻿<Window x:Class="EsbozoProyecto1.agregarNuevaTarea"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EsbozoProyecto1"
         mc:Ignorable="d"
-        Title="agregarInvitado" Height="450" Width="800">
+        Title="agregarNuevaTarea" Height="450" Width="800">
     <Grid>
-        <TextBox x:Name="NombreInvitado" HorizontalAlignment="Left" Height="23" Margin="281,40,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Nombre del invitado&#xD;&#xA;" HorizontalAlignment="Left" Margin="85,36,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="tareaNueva" HorizontalAlignment="Left" Height="23" Margin="281,40,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <Label  x:Name="rptTarea" Content="Indica cual es la nueva tarea" HorizontalAlignment="Left" Margin="85,36,0,0" VerticalAlignment="Top"/>
         <Button Content="Enviar" HorizontalAlignment="Left" Background="#FFFABFB7" Margin="315,195,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
-
     </Grid>
 </Window>
