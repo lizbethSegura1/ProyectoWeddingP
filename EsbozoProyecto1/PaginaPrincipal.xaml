@@ -32,7 +32,20 @@
                 </Canvas>
             </TabItem>
             <TabItem x:Name="tabProveedores" Header="Proveedores"  TabIndex="1">
-                <!-- contenido del tab 1 -->
+                <Canvas>
+                    <StackPanel Canvas.Left="30" Canvas.Top="30">
+                         <Label Content="Proveedores (indicar: empresa, servicio, coste)"/>
+                    </StackPanel>
+                    <StackPanel  Canvas.Left="30" Canvas.Top="60">
+                        <TextBox x:Name="Proveedores" HorizontalAlignment="Left" Width="300"/>
+                    </StackPanel>
+                    <StackPanel  Canvas.Left="400" Canvas.Top="60">
+                        <Button Content="Guardar" Click="GuardarProveedor"/>
+                    </StackPanel>
+                    <StackPanel  Canvas.Left="30" Canvas.Top="90">
+                        <ListBox x:Name="listBoxProveedores" HorizontalAlignment="Left" Height="189" Width="710"/>
+                    </StackPanel>
+                </Canvas>
             </TabItem>
             <TabItem x:Name="tabTareas" Header="Tareas"  TabIndex="2">
                 <!-- contenido del tab 2 -->
@@ -69,7 +82,17 @@
                 </Grid>
             </TabItem>
             <TabItem x:Name="tabPresupuesto" Header="Presupuesto"  TabIndex="4">
-                <!-- contenido del tab 2 -->
+                <Canvas>
+                    <StackPanel Canvas.Left="30" Canvas.Top="30">
+                        <Label Content="Indique presupuesto"/>
+                    </StackPanel>
+                    <StackPanel  Canvas.Left="30" Canvas.Top="60">
+                        <TextBox x:Name="Presupuesto" HorizontalAlignment="Left" Width="100"/>
+                    </StackPanel>
+                    <StackPanel  Canvas.Left="240" Canvas.Top="60">
+                        <Button x:Name="calcularPresupuesto" Content="Calcular" Background="#FFFABFB7" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="120" Height="35" Click="OnCalcularPresupuesto"/>
+                    </StackPanel>
+                </Canvas>
             </TabItem>
             
         </TabControl>

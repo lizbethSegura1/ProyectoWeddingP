@@ -115,6 +115,7 @@
     <Compile Include="PaginaPrincipal.xaml.cs">
       <DependentUpon>PaginaPrincipal.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Proveedor.cs" />
     <Compile Include="Tareas.xaml.cs">
       <DependentUpon>Tareas.xaml</DependentUpon>
     </Compile>

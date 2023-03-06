@@ -52,6 +52,10 @@ namespace EsbozoProyecto1
                     break;
                 case "tabProveedores":
                     // Agregar los controles necesarios dentro del TabItem2
+                    listBoxProveedores.Items.Clear();
+                    List<Proveedor> lp = db.getProveedores(boda);
+                    foreach (Proveedor p in lp)
+                        listBoxProveedores.Items.Add(p.ToString());
                     break;
                 case "tabTareas":
                     if (listBoxTareas.Items.Count > 0)
@@ -88,6 +92,12 @@ namespace EsbozoProyecto1
             TabControl tb = tabControl as TabControl;
             switch(btn.Name)
             {
+                case "botonProveedores":
+
+                    tabControl.SelectedIndex = 1;
+
+
+                    break;
                 case "botonInvitados":
 
                     tabControl.SelectedIndex = 3;
@@ -212,6 +222,45 @@ namespace EsbozoProyecto1
         private void tabControl_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
+        }
+
+        private void GuardarProveedor(object sender, RoutedEventArgs e)
+        {
+            Database db = new Database();
+            Proveedor p = new Proveedor();
+            var data = Proveedores.Text.Split(',');
+            if(data.Length!=3)
+            {
+                MessageBox.Show("Indique formato correcto");
+                return;
+            }
+            p.Empresa = data[0];
+            p.Boda = boda;
+            p.Servicio = data[1];
+            p.Coste = Double.Parse(data[2]);
+            db.guardarProveedor(p);
+            listBoxProveedores.Items.Add(p.ToString());
+        }
+
+        private void OnCalcularPresupuesto(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                String str = Presupuesto.Text;
+                Double presupuesto = Double.Parse(str);
+                Database db = new Database();
+                Double costeTotal = 0;
+                bool rico = db.calcularPresupuesto(boda, presupuesto, out costeTotal);
+                if(!rico)
+                    MessageBox.Show("NO TE CASES AHORRAAA!!!: " + (presupuesto-costeTotal));
+                else
+                    MessageBox.Show("Aun te queda dinero!! gasta mas!!! "+(presupuesto - costeTotal));
+            } catch (Exception ep)
+            {
+                MessageBox.Show("Indique un numero real como presupuesto");
+                Console.WriteLine(ep.Message);
+                
+            }
         }
     }
 }
