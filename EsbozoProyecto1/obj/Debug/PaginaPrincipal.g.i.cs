@@ -41,7 +41,7 @@ namespace EsbozoProyecto1 {
     public partial class PaginaPrincipal : System.Windows.Window, System.Windows.Markup.IComponentConnector {
         
         
-        #line 22 "..\..\PaginaPrincipal.xaml"
+        #line 13 "..\..\PaginaPrincipal.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TabControl tabControl;
         
@@ -49,7 +49,7 @@ namespace EsbozoProyecto1 {
         #line hidden
         
         
-        #line 23 "..\..\PaginaPrincipal.xaml"
+        #line 14 "..\..\PaginaPrincipal.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TabItem tabInicio;
         
@@ -57,7 +57,7 @@ namespace EsbozoProyecto1 {
         #line hidden
         
         
-        #line 27 "..\..\PaginaPrincipal.xaml"
+        #line 18 "..\..\PaginaPrincipal.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button botonInicio;
         
@@ -65,7 +65,7 @@ namespace EsbozoProyecto1 {
         #line hidden
         
         
-        #line 28 "..\..\PaginaPrincipal.xaml"
+        #line 19 "..\..\PaginaPrincipal.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button botonProveedores;
         
@@ -73,7 +73,7 @@ namespace EsbozoProyecto1 {
         #line hidden
         
         
-        #line 29 "..\..\PaginaPrincipal.xaml"
+        #line 20 "..\..\PaginaPrincipal.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button botonTareas;
         
@@ -81,7 +81,7 @@ namespace EsbozoProyecto1 {
         #line hidden
         
         
-        #line 30 "..\..\PaginaPrincipal.xaml"
+        #line 21 "..\..\PaginaPrincipal.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button botonInvitados;
         
@@ -89,7 +89,7 @@ namespace EsbozoProyecto1 {
         #line hidden
         
         
-        #line 31 "..\..\PaginaPrincipal.xaml"
+        #line 22 "..\..\PaginaPrincipal.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button botonPresupuesto;
         
@@ -97,7 +97,7 @@ namespace EsbozoProyecto1 {
         #line hidden
         
         
-        #line 35 "..\..\PaginaPrincipal.xaml"
+        #line 26 "..\..\PaginaPrincipal.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.DatePicker FechaBoda;
         
@@ -105,7 +105,7 @@ namespace EsbozoProyecto1 {
         #line hidden
         
         
-        #line 36 "..\..\PaginaPrincipal.xaml"
+        #line 27 "..\..\PaginaPrincipal.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TextBlock CuentaRegresiva;
         
@@ -113,7 +113,7 @@ namespace EsbozoProyecto1 {
         #line hidden
         
         
-        #line 42 "..\..\PaginaPrincipal.xaml"
+        #line 33 "..\..\PaginaPrincipal.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TabItem tabProveedores;
         
@@ -121,7 +121,7 @@ namespace EsbozoProyecto1 {
         #line hidden
         
         
-        #line 45 "..\..\PaginaPrincipal.xaml"
+        #line 36 "..\..\PaginaPrincipal.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TabItem tabTareas;
         
@@ -129,7 +129,7 @@ namespace EsbozoProyecto1 {
         #line hidden
         
         
-        #line 52 "..\..\PaginaPrincipal.xaml"
+        #line 43 "..\..\PaginaPrincipal.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.ListBox listBoxTareas;
         
@@ -137,7 +137,7 @@ namespace EsbozoProyecto1 {
         #line hidden
         
         
-        #line 55 "..\..\PaginaPrincipal.xaml"
+        #line 46 "..\..\PaginaPrincipal.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button agregarTarea;
         
@@ -145,7 +145,7 @@ namespace EsbozoProyecto1 {
         #line hidden
         
         
-        #line 58 "..\..\PaginaPrincipal.xaml"
+        #line 49 "..\..\PaginaPrincipal.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button tareaRealizada;
         
@@ -153,7 +153,7 @@ namespace EsbozoProyecto1 {
         #line hidden
         
         
-        #line 62 "..\..\PaginaPrincipal.xaml"
+        #line 53 "..\..\PaginaPrincipal.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TabItem tabInvitados;
         
@@ -161,7 +161,7 @@ namespace EsbozoProyecto1 {
         #line hidden
         
         
-        #line 72 "..\..\PaginaPrincipal.xaml"
+        #line 63 "..\..\PaginaPrincipal.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.ListBox listBoxInvitados;
         
@@ -169,7 +169,7 @@ namespace EsbozoProyecto1 {
         #line hidden
         
         
-        #line 74 "..\..\PaginaPrincipal.xaml"
+        #line 65 "..\..\PaginaPrincipal.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button agregar;
         
@@ -177,7 +177,7 @@ namespace EsbozoProyecto1 {
         #line hidden
         
         
-        #line 75 "..\..\PaginaPrincipal.xaml"
+        #line 66 "..\..\PaginaPrincipal.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button eliminar;
         
@@ -185,7 +185,7 @@ namespace EsbozoProyecto1 {
         #line hidden
         
         
-        #line 79 "..\..\PaginaPrincipal.xaml"
+        #line 70 "..\..\PaginaPrincipal.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TabItem tabPresupuesto;
         
@@ -224,7 +224,7 @@ namespace EsbozoProyecto1 {
             {
             case 1:
             
-            #line 9 "..\..\PaginaPrincipal.xaml"
+            #line 10 "..\..\PaginaPrincipal.xaml"
             ((EsbozoProyecto1.PaginaPrincipal)(target)).Loaded += new System.Windows.RoutedEventHandler(this.MiMetodoLoaded);
             
             #line default
@@ -233,7 +233,7 @@ namespace EsbozoProyecto1 {
             case 2:
             this.tabControl = ((System.Windows.Controls.TabControl)(target));
             
-            #line 22 "..\..\PaginaPrincipal.xaml"
+            #line 13 "..\..\PaginaPrincipal.xaml"
             this.tabControl.SelectionChanged += new System.Windows.Controls.SelectionChangedEventHandler(this.tabControl_SelectionChanged);
             
             #line default
@@ -245,7 +245,7 @@ namespace EsbozoProyecto1 {
             case 4:
             this.botonInicio = ((System.Windows.Controls.Button)(target));
             
-            #line 27 "..\..\PaginaPrincipal.xaml"
+            #line 18 "..\..\PaginaPrincipal.xaml"
             this.botonInicio.Click += new System.Windows.RoutedEventHandler(this.OnTabButtonClick);
             
             #line default
@@ -254,7 +254,7 @@ namespace EsbozoProyecto1 {
             case 5:
             this.botonProveedores = ((System.Windows.Controls.Button)(target));
             
-            #line 28 "..\..\PaginaPrincipal.xaml"
+            #line 19 "..\..\PaginaPrincipal.xaml"
             this.botonProveedores.Click += new System.Windows.RoutedEventHandler(this.OnTabButtonClick);
             
             #line default
@@ -263,7 +263,7 @@ namespace EsbozoProyecto1 {
             case 6:
             this.botonTareas = ((System.Windows.Controls.Button)(target));
             
-            #line 29 "..\..\PaginaPrincipal.xaml"
+            #line 20 "..\..\PaginaPrincipal.xaml"
             this.botonTareas.Click += new System.Windows.RoutedEventHandler(this.OnTabButtonClick);
             
             #line default
@@ -272,7 +272,7 @@ namespace EsbozoProyecto1 {
             case 7:
             this.botonInvitados = ((System.Windows.Controls.Button)(target));
             
-            #line 30 "..\..\PaginaPrincipal.xaml"
+            #line 21 "..\..\PaginaPrincipal.xaml"
             this.botonInvitados.Click += new System.Windows.RoutedEventHandler(this.OnTabButtonClick);
             
             #line default
@@ -281,7 +281,7 @@ namespace EsbozoProyecto1 {
             case 8:
             this.botonPresupuesto = ((System.Windows.Controls.Button)(target));
             
-            #line 31 "..\..\PaginaPrincipal.xaml"
+            #line 22 "..\..\PaginaPrincipal.xaml"
             this.botonPresupuesto.Click += new System.Windows.RoutedEventHandler(this.OnTabButtonClick);
             
             #line default
@@ -295,7 +295,7 @@ namespace EsbozoProyecto1 {
             return;
             case 11:
             
-            #line 37 "..\..\PaginaPrincipal.xaml"
+            #line 28 "..\..\PaginaPrincipal.xaml"
             ((System.Windows.Controls.Button)(target)).Click += new System.Windows.RoutedEventHandler(this.GuardarFecha);
             
             #line default
@@ -313,7 +313,7 @@ namespace EsbozoProyecto1 {
             case 15:
             this.agregarTarea = ((System.Windows.Controls.Button)(target));
             
-            #line 55 "..\..\PaginaPrincipal.xaml"
+            #line 46 "..\..\PaginaPrincipal.xaml"
             this.agregarTarea.Click += new System.Windows.RoutedEventHandler(this.OnClickNuevaTarea);
             
             #line default
@@ -322,7 +322,7 @@ namespace EsbozoProyecto1 {
             case 16:
             this.tareaRealizada = ((System.Windows.Controls.Button)(target));
             
-            #line 58 "..\..\PaginaPrincipal.xaml"
+            #line 49 "..\..\PaginaPrincipal.xaml"
             this.tareaRealizada.Click += new System.Windows.RoutedEventHandler(this.OnClickTareaRealizada);
             
             #line default
@@ -334,7 +334,7 @@ namespace EsbozoProyecto1 {
             case 18:
             this.listBoxInvitados = ((System.Windows.Controls.ListBox)(target));
             
-            #line 72 "..\..\PaginaPrincipal.xaml"
+            #line 63 "..\..\PaginaPrincipal.xaml"
             this.listBoxInvitados.SelectionChanged += new System.Windows.Controls.SelectionChangedEventHandler(this.ListBox_SelectionChanged);
             
             #line default
@@ -343,7 +343,7 @@ namespace EsbozoProyecto1 {
             case 19:
             this.agregar = ((System.Windows.Controls.Button)(target));
             
-            #line 74 "..\..\PaginaPrincipal.xaml"
+            #line 65 "..\..\PaginaPrincipal.xaml"
             this.agregar.Click += new System.Windows.RoutedEventHandler(this.OnClickAgregar);
             
             #line default
@@ -352,7 +352,7 @@ namespace EsbozoProyecto1 {
             case 20:
             this.eliminar = ((System.Windows.Controls.Button)(target));
             
-            #line 75 "..\..\PaginaPrincipal.xaml"
+            #line 66 "..\..\PaginaPrincipal.xaml"
             this.eliminar.Click += new System.Windows.RoutedEventHandler(this.buttonEliminar_Click);
             
             #line default
