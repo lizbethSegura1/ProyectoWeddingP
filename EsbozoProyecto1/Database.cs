@@ -39,6 +39,7 @@ namespace EsbozoProyecto1
                     tarea TEXT not null,
                     confirmado TEXT
                 );";
+                command.ExecuteNonQuery();
                 command.CommandText = @"CREATE TABLE IF NOT EXISTS proveedores ( 
                     boda TEXT not null,
                     empresa TEXT not null,
