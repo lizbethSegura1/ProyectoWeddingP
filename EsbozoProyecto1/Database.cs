@@ -69,6 +69,7 @@ namespace EsbozoProyecto1
                 command.ExecuteNonQuery();
                 connection.Close();
 
+
             }
         }
 
