@@ -6,63 +6,90 @@
         xmlns:local="clr-namespace:EsbozoProyecto1"
         mc:Ignorable="d"
         Title="PaginaPrincipal" 
-        MaxWidth="1000" MaxHeight="650" 
-        MinWidth="1000" MinHeight="650"
         Loaded="MiMetodoLoaded"
         >
     <Grid >
-        <TabControl Grid.Row="1" Name="tabControl" Grid.ColumnSpan="2" SelectionChanged="tabControl_SelectionChanged" Width="760" >
-            <TabItem x:Name="tabInicio" Header="Inicio 1" TabIndex="0">
+        <TabControl Grid.Row="1" Name="tabControl" Grid.ColumnSpan="2" SelectionChanged="tabControl_SelectionChanged"  >
+            <TabItem x:Name="tabInicio" Header="Inicio" TabIndex="0">
                 <!-- contenido del tab 1 -->
-                <Canvas>
-                    <StackPanel Width="1200" Height="200" VerticalAlignment="Center" Orientation="Horizontal" HorizontalAlignment="Center">
-                        <Button x:Name="botonInicio" Content="Inicio" Margin="30" Click="OnTabButtonClick" Width="125" Height="97" Background="White"/>
-                        <Button x:Name="botonProveedores" Content="Proveedores" Margin="50" Click="OnTabButtonClick" Width="125" Height="97" Background="White"/>
-                        <Button x:Name="botonTareas" Content="Tareas"  Margin="30" Click="OnTabButtonClick" Width="125" Height="97" Background="White"/>
-                        <Button x:Name="botonInvitados" Content="Invitados" Margin="30" Click="OnTabButtonClick" Width="125" Height="97"  Background="White"/>
-                        <Button x:Name="botonPresupuesto" Content="Presupuesto" Margin="30" Click="OnTabButtonClick"  Width="125" Height="97"  Background="White"/>
-                    </StackPanel>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
 
-                    <StackPanel Canvas.Left="50" Canvas.Top="200">
-                        <DatePicker x:Name="FechaBoda"/>
-                        <TextBlock x:Name="CuentaRegresiva"/>
-                        <Button Content="Guardar" Click="GuardarFecha"/>
-                    </StackPanel>
+                    <Button x:Name="botonInicio" Content="Inicio" Margin="5" Click="OnTabButtonClick" Width="125" Height="97" Background="White"  Grid.Row="0" Grid.Column="0"/>
+                    <Button x:Name="botonProveedores" Content="Proveedores" Margin="5" Click="OnTabButtonClick" Width="125" Height="97" Background="White" Grid.Row="0" Grid.Column="1"/>
+                    <Button x:Name="botonTareas" Content="Tareas"  Margin="5" Click="OnTabButtonClick" Width="125" Height="97" Background="White" Grid.Row="0" Grid.Column="2"/>
+                    <Button x:Name="botonInvitados" Content="Invitados" Margin="5" Click="OnTabButtonClick" Width="125" Height="97"  Background="White" Grid.Row="0" Grid.Column="3"/>
+                    <Button x:Name="botonPresupuesto" Content="Presupuesto" Margin="5" Click="OnTabButtonClick"  Width="125" Height="97"  Background="White" Grid.Row="0" Grid.Column="4"/>
 
-                </Canvas>
+                    <DatePicker x:Name="FechaBoda" Grid.Row="1" Grid.Column="1" Width="125"/>
+                    <TextBlock x:Name="CuentaRegresiva" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" />
+                    <Button Content="Guardar" Click="GuardarFecha" Grid.Row="1" Grid.Column="4"/>
+
+
+                </Grid>
             </TabItem>
             <TabItem x:Name="tabProveedores" Header="Proveedores"  TabIndex="1">
-                <Canvas>
-                    <StackPanel Canvas.Left="30" Canvas.Top="30">
-                         <Label Content="Proveedores (indicar: empresa, servicio, coste)"/>
-                    </StackPanel>
-                    <StackPanel  Canvas.Left="30" Canvas.Top="60">
-                        <TextBox x:Name="Proveedores" HorizontalAlignment="Left" Width="300"/>
-                    </StackPanel>
-                    <StackPanel  Canvas.Left="400" Canvas.Top="60">
-                        <Button Content="Guardar" Click="GuardarProveedor"/>
-                    </StackPanel>
-                    <StackPanel  Canvas.Left="30" Canvas.Top="90">
-                        <ListBox x:Name="listBoxProveedores" HorizontalAlignment="Left" Height="189" Width="710"/>
-                    </StackPanel>
-                </Canvas>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="168"/>
+                        <ColumnDefinition Width="11"/>
+                        <ColumnDefinition Width="159"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Label Content="Proveedores (indicar: empresa, servicio, coste):" Grid.Row="0" Grid.ColumnSpan="3"/>
+                    <TextBox x:Name="Proveedores" HorizontalAlignment="Left" Width="300" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3"/>
+                    <Button Content="Guardar" Click="GuardarProveedor" Grid.Row="1" Grid.Column="3"/>
+
+
+                    <ListBox x:Name="listBoxProveedores" HorizontalAlignment="Left" Width="400" Margin="0,28,0,5" Height="200" Grid.Row="2" Grid.ColumnSpan="4"/>
+
+                </Grid>
             </TabItem>
             <TabItem x:Name="tabTareas" Header="Tareas"  TabIndex="2">
                 <!-- contenido del tab 2 -->
-                <Canvas>
-                    <StackPanel  Canvas.Left="30" Canvas.Top="30">
-                        <TextBlock Text="Mis Tareas:"  FontFamily="Monotype Corsiva" FontWeight="Bold" FontSize="30" VerticalAlignment="Top"  HorizontalAlignment="Left" Height="45" Width="143"/>
-                    </StackPanel>
-                    <StackPanel  Canvas.Left="30" Canvas.Top="90">
-                       <ListBox x:Name="listBoxTareas" HorizontalAlignment="Left" Height="189" Width="710"/>
-                    </StackPanel>
-                    <StackPanel  Canvas.Left="250" Canvas.Top="35">
-                        <Button x:Name="agregarTarea" Content="Nueva tarea" Background="#FFFABFB7" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="120" Height="35" Click="OnClickNuevaTarea"/>
-                    </StackPanel>
-                    <StackPanel  Canvas.Left="400" Canvas.Top="35">
-                        <Button x:Name="tareaRealizada" Content="Eliminar Tarea" Background="#FFFABFB7" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="120" Height="35" Click="OnClickTareaRealizada"/>
-                    </StackPanel>
-                </Canvas>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock Text="Mis Tareas:"  FontFamily="Monotype Corsiva" FontWeight="Bold" FontSize="30" VerticalAlignment="Top"  HorizontalAlignment="Left" Height="45" Width="143" Grid.Row="0"/>
+
+
+                    <ListBox x:Name="listBoxTareas" HorizontalAlignment="Left" Height="189" Width="400" Grid.Row="2" Grid.ColumnSpan="3"/>
+
+
+                    <Button x:Name="agregarTarea" Content="Nueva tarea" Background="#FFFABFB7" HorizontalAlignment="Left"  VerticalAlignment="Top" 
+                            Width="120" Height="35" Click="OnClickNuevaTarea" Grid.Row="0" Grid.Column="2"/>
+
+
+                    <Button x:Name="tareaRealizada" Content="Eliminar Tarea" Background="#FFFABFB7" HorizontalAlignment="Left" 
+                            VerticalAlignment="Top" Width="120" Height="35" Click="OnClickTareaRealizada" Grid.Row="0" Grid.Column="1"/>
+
+                </Grid>
             </TabItem>
             <TabItem x:Name="tabInvitados" Header="Invitados"  TabIndex="3">
                 <!-- contenido del tab 3 -->
@@ -94,7 +121,7 @@
                     </StackPanel>
                 </Canvas>
             </TabItem>
-            
+
         </TabControl>
     </Grid>
 </Window>
